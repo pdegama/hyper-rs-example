@@ -10,9 +10,9 @@ pub async fn read_response_body(res: Request<Body>) -> Result<String, hyper::Err
 
 // request handler
 pub async fn handle(req: Request<Body>) -> Result<Response<Body>, Infallible> {
-    println!("{}", req.uri().path());
-    println!("{:?}", req.headers());
-    println!("{}", read_response_body(req).await.unwrap());
+//    println!("{}", req.uri().path());
+//    println!("{:?}", req.headers());
+//    println!("{}", read_response_body(req).await.unwrap());
     let r = Response::builder()
         .status(200)
         .header("Content-Type", "text/html")
